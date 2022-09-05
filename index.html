@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Khelian LARVET</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="icon" href="favicon.ico" />
+</head>
+
+<body onload="main();">
+
+    <div class="new-nav">
+        <ul>
+            <li><a title="home" href="#home">Home</a></li>
+            <li><a title="aboutme" href="#aboutme">About</a></li>
+            <li><a title="myprojects" href="#myprojects">Projects</a></li>
+        </ul>
+    </div>
+
+    <a id="home"></a>
+    <div class="header-container">
+
+        <div class="container-name">
+            <div class="mp0 name">KHÉLIAN LARVET</div>
+            <div class="mp0 job">3D Programmer</div>
+        </div>
+
+        <canvas id="mySurface"></canvas>
+
+        <div id="control" class="slider-3d">
+            <label for="speed_range">Speed</label>
+            <div class="input-container">
+                <input type="range" min="1" max="5" value="3" step="1" class="slider" id="speed_range"
+                    name="speed_range"
+                    oninput="this.nextElementSibling.value = this.value; rangeChange(0, this.value);">
+                <output>3.0</output>
+            </div>
+            <label for="amplitude_range">Amplitude</label>
+            <div class="input-container">
+                <input type="range" min="0.01" max="1" value="0.05" step="0.01" placeholder='0.00' class="slider"
+                    id="amplitude_range" name="amplitude_range"
+                    oninput="this.nextElementSibling.value = this.value; rangeChange(1, this.value);">
+                <output>0.05</output>
+            </div>
+            <label for="frequency_range">Frequency</label>
+            <div class="input-container">
+                <input type="range" min="0.1" max="5" value="1.5" step="0.1" placeholder='0.00' class="slider"
+                    id="frequency_range" name="frequency_range"
+                    oninput="this.nextElementSibling.value = this.value; rangeChange(2, this.value);">
+                <output>1.5</output>
+            </div>
+        </div>
+
+    </div>
+
+
+    <a id="aboutme"></a>
+    <div class="container">
+        <div class="container-title">
+            <h2>About Me</h2>
+            <hr>
+        </div>
+        <div class="container-profile">
+            <div class="profile-img">
+                <div class="border-profile-top"></div>
+                <div class="border-profile-bot"></div>
+            </div>
+            <div class="profile-desc">
+                <div class="profile-text">
+                    <p>
+                        I'm Khélian LARVET, 23 years old and I am passionate about the game development and the 3D.
+                    </p>
+                    <p>
+                        I am currently in the last year of my master's degree named "IMAGINE" and I'm ready to enter the
+                        working world where I could put my skills to use in the realization of new
+                        projects.
+                    </p>
+                    <p>
+                        I am highly organized and I always work towards achieving best result on each project. I like to
+                        think of myself as a team player. While I don’t mind taking on
+                        solo projects, I prefer to work with others.
+                    </p>
+                </div>
+                <a href="res/CV.pdf" type="application/pdf" target="_blank">
+                    <button class="cv-button">MY RESUME</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <a id="myprojects"></a>
+    <div class="container">
+
+        <div class="container-title">
+            <h2>My Projects</h2>
+            <hr>
+        </div>
+
+        <div class="container-portfolio">
+            <div class="container-card">
+                <div class="project-image background-gameengine"></div>
+                <div class="desc-project desc-project-text">
+                    <div class="desc-project-title">GameEngine</div>
+                    <div class="desc-project-techused">C++ , OpenGL</div>
+                </div>
+                <button onclick="openModal('gameEngine')" class="desc-project learnmore-button">LEARN MORE</button>
+            </div>
+            <div class="container-card">
+                <div class="project-image background-meetingcar"></div>
+                <div class="desc-project desc-project-text">
+                    <div class="desc-project-title">MeetingCar</div>
+                    <div class="desc-project-techused">Java , Android</div>
+                </div>
+                <button onclick="openModal('meetingCar')" class="desc-project learnmore-button">LEARN MORE</button>
+            </div>
+            <div class="container-card">
+                <div class="project-image background-colorharmony"></div>
+                <div class="desc-project desc-project-text">
+                    <div class="desc-project-title">ColorHarmony</div>
+                    <div class="desc-project-techused">C++ , GTK</div>
+                </div>
+                <button onclick="openModal('colorHarmony')" class="desc-project learnmore-button">LEARN MORE</button>
+            </div>
+            <div class="container-card">
+                <div class="project-image background-swing"></div>
+                <div class="desc-project desc-project-text">
+                    <div class="desc-project-title">Swing</div>
+                    <div class="desc-project-techused">C# , Unity</div>
+                </div>
+                <button onclick="openModal('swing')" class="desc-project learnmore-button">LEARN MORE</button>
+            </div>
+            <div class="container-card">
+                <div class="project-image background-raytracing"></div>
+                <div class="desc-project desc-project-text">
+                    <div class="desc-project-title">Raytracing</div>
+                    <div class="desc-project-techused">C++ , OpenGL</div>
+                </div>
+                <button onclick="openModal('raytracing')" class="desc-project learnmore-button">LEARN MORE</button>
+            </div>
+            <div class="container-card">
+                <div class="project-image background-disastweet"></div>
+                <div class="desc-project desc-project-text">
+                    <div class="desc-project-title">Disastweet</div>
+                    <div class="desc-project-techused">Python , Javascript , MongoDB , Spacy , Leaflet</div>
+                </div>
+                <button onclick="openModal('disastweet')" class="desc-project learnmore-button">LEARN MORE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+
+            <!-- HEADER -->
+            <span id="closeModal" class="close">&times;</span>
+
+            <!-- CAROUSSEL IMG -->
+            <div id='modalImg' class="slideshow-container">
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+
+            <!-- BODY -->
+            <div class="modal-body">
+                <div id="titleModal" class="modal-title"></div>
+                <div id="dateModal" class="modal-date"></div>
+                <div id="techModal" class="modal-tech"></div>
+                <div id="descModal" class="modal-desc"></div>
+            </div>
+
+            <!-- FOOTER -->
+            <div id='modalLink' class="modal-footer">
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <a title="home" href="#home">
+            <div class="page-link-up">
+                <div class="icon_arrow"></div>
+            </div>
+        </a>
+
+        <div class="contact-link">
+            <a href="https://github.com/KhelianL">
+                <div class="icon-holder">
+                    <div class="icon_github"></div>
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/khelianlarvet/">
+                <div class="icon-holder">
+                    <div class="icon_linkedin"></div>
+                </div>
+            </a>
+        </div>
+
+        <div class="footnote">
+            KHELIAN LARVET <span class="highlight">©2022</span>
+        </div>
+
+    </footer>
+</body>
+
+<script type="text/javascript" src="./script/gl-matrix-min.js"></script>
+<script type="text/javascript">
+    const { mat2, mat3, mat4, vec2, vec3, vec4 } = glMatrix;
+</script>
+<script type="text/javascript" src="./script/sliders.js"></script>
+<script type="text/javascript" src="./script/shader.js"></script>
+<script type="text/javascript" src="./script/webglApp.js"></script>
+<script type="text/javascript" src="./script/modal.js"></script>
+<script type="text/javascript" src="./script/carousel.js"></script>
+
+</html>

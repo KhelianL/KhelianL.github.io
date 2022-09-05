@@ -1,0 +1,51 @@
+:root {
+    --icon-size: 30px;
+}
+
+.icon_linkedin {
+    background-image: url("data:image/svg+xml,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3C!-- Created with Inkscape (http://www.inkscape.org/) --%3E %3Csvg width='126.26102mm' height='126.60313mm' viewBox='0 0 126.26102 126.60313' version='1.1' id='svg5' xml:space='preserve' inkscape:export-filename='image.svg' inkscape:export-xdpi='96' inkscape:export-ydpi='96' inkscape:version='1.2.1 (9c6d41e410, 2022-07-14)' sodipodi:docname='dessin.svg' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Csodipodi:namedview id='namedview7' pagecolor='%23ffffff' bordercolor='%23000000' borderopacity='0.25' inkscape:showpageshadow='2' inkscape:pageopacity='0.0' inkscape:pagecheckerboard='0' inkscape:deskcolor='%23d1d1d1' inkscape:document-units='mm' showgrid='false' inkscape:zoom='0.78127806' inkscape:cx='242.55129' inkscape:cy='371.18667' inkscape:window-width='1858' inkscape:window-height='1057' inkscape:window-x='54' inkscape:window-y='-8' inkscape:window-maximized='1' inkscape:current-layer='layer1' /%3E%3Cdefs id='defs2' /%3E%3Cg inkscape:label='Calque 1' inkscape:groupmode='layer' id='layer1' transform='translate(-40.836424,-50.486352)'%3E%3Cg id='g84' transform='matrix(0.26458333,0,0,0.26458333,36.233468,46.054581)' style='fill:%23ffffff'%3E%3Cg id='_x35_6-linkedin' style='fill:%23ffffff'%3E%3Cg id='g67' style='fill:%23ffffff'%3E%3Cg id='g65' style='fill:%23ffffff'%3E%3Crect height='328.97' style='fill:%23ffffff' width='106.716' x='17.396999' y='166.28' id='rect59' /%3E%3Cpath d='m 414.789,170.138 c -1.133,-0.355 -2.207,-0.743 -3.396,-1.078 -1.438,-0.327 -2.865,-0.6 -4.328,-0.833 -5.662,-1.139 -11.875,-1.946 -19.148,-1.946 -62.211,0 -101.678,45.372 -114.674,62.894 V 166.28 H 166.526 V 495.25 H 273.242 V 315.813 c 0,0 80.643,-112.628 114.674,-29.911 V 495.25 H 494.604 V 273.257 c 0,-49.708 -33.975,-91.127 -79.815,-103.119 z m 0,0' style='fill:%23ffffff' id='path61' /%3E%3Cpath d='m 121.789,69.085 c 0,28.909 -23.373,52.337 -52.195,52.337 -28.824,0 -52.196,-23.429 -52.196,-52.337 0,-28.903 23.372,-52.335 52.196,-52.335 28.822,0 52.195,23.432 52.195,52.335 z m 0,0' style='fill:%23ffffff' id='path63' /%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cg id='Layer_1' style='fill:%23ffffff' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-position: center;
+    background-size: cover;
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+
+.icon_github {
+    background-image: url("data:image/svg+xml,%3C?xml version='1.0' encoding='UTF-8'?%3E %3C!-- Created with Inkscape (http://www.inkscape.org/) --%3E %3Csvg width='118.53mm' height='118.53mm' version='1.1' viewBox='0 0 118.53 118.53' xml:space='preserve' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='translate(-22.349 -22.014)'%3E%3Cpath class='st0' d='m81.616 22.014c-32.729 0-59.267 27.199-59.267 60.775 0 26.855 16.986 49.609 40.534 57.653 2.9633 0.55562 4.0481-1.3229 4.0481-2.9369 0-1.4552-0.05292-5.2652-0.07937-10.345-16.484 3.6777-19.976-8.1492-19.976-8.1492-2.6988-7.0115-6.5881-8.89-6.5881-8.89-5.371-3.7836 0.39688-3.7042 0.39688-3.7042 5.9531 0.42333 9.0752 6.2706 9.0752 6.2706 5.2917 9.2869 13.864 6.6146 17.251 5.0536 0.52917-3.9158 2.0638-6.6146 3.7571-8.1227-13.15-1.5346-26.988-6.7469-26.988-30.03 0-6.641 2.3019-12.065 6.0854-16.298-0.60855-1.5346-2.6458-7.7258 0.58208-16.087 0 0 4.9742-1.6404 16.298 6.2177 4.736-1.3494 9.7896-2.0108 14.843-2.0373 5.0271 0.02646 10.107 0.68792 14.843 2.0373 11.324-7.8581 16.272-6.2177 16.272-6.2177 3.2279 8.3608 1.1906 14.552 0.58208 16.087 3.7835 4.2598 6.0854 9.6838 6.0854 16.298 0 23.336-13.864 28.469-27.067 29.977 2.1167 1.8785 4.0217 5.5827 4.0217 11.245 0 8.1227-0.07937 14.684-0.07937 16.669 0 1.614 1.0583 3.519 4.0746 2.9104 23.601-8.0169 40.561-30.771 40.561-57.6 0-33.576-26.538-60.775-59.267-60.775z' fill='%23fff' stroke-width='.26458'/%3E%3C/g%3E%3Cstyle type='text/css'%3E%3C!%5BCDATA%5B .st0%7Bfill-rule:evenodd;clip-rule:evenodd;%7D %5D%5D%3E%3C/style%3E%3C/svg%3E");
+    background-position: center;
+    background-size: cover;
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+
+.icon_arrow {
+    background-image: url("data:image/svg+xml,%3C?xml version='1.0' ?%3E%3Csvg data-name='Layer 1' id='Layer_1' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;stroke:%23fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:40px;%7D%3C/style%3E%3C/defs%3E%3Ctitle/%3E%3Cpolyline class='cls-1' points='91.01 296.18 255.49 131.7 420.48 296.69'/%3E%3Cpolyline class='cls-1' points='144.29 379.95 255.57 268.67 367.2 380.3'/%3E%3C/svg%3E");
+    background-position: center;
+    background-size: cover;
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+
+.background-swing {
+    background-image: url(../img/img_Swing.png);
+}
+
+.background-disastweet {
+    background-image: url(../img/img_Disastweet.png);
+}
+
+.background-gameengine {
+    background-image: url(../img/img_GameEngine.png);
+}
+
+.background-meetingcar {
+    background-image: url(../img/img_MeetingCar.png);
+}
+
+.background-raytracing {
+    background-image: url(../img/img_Raytracing.png);
+}
+
+.background-colorharmony {
+    background-image: url(../img/img_ColorHarmony.png);
+}

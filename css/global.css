@@ -1,0 +1,745 @@
+:root {
+    --sidenav-margin: 65px;
+    --maincolor: #e31b6d;
+    --secondarycolor: #73CCA8;
+    --background: #222733;
+    --white: #fff;
+}
+
+html,
+body {
+    background-color: var(--background);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+.mp0 {
+    margin: 0;
+    padding: 0;
+}
+
+/************************/
+/* Scroll (Chrome Only) */
+/************************/
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #525e65;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+/******/
+/* hr */
+/******/
+
+hr {
+    height: 20px;
+    width: 100%;
+    background-image: radial-gradient(farthest-side at 50% -50%,
+            hsl(0, 0%, 100%),
+            hsla(0, 0%, 100%, 0));
+    position: relative;
+    border: solid 0px;
+    margin-bottom: 50px;
+}
+
+hr::before {
+    height: 1px;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(90deg,
+            hsla(0, 0%, 0%, 0),
+            hsla(0, 0%, 0%, 0.75) 50%,
+            hsla(0, 0%, 0%, 0));
+}
+
+/************/
+/* Text CSS */
+/************/
+
+@font-face {
+    font-family: 'awa';
+    src: url(../font/Awaken.ttf);
+}
+
+@font-face {
+    font-family: 'orb';
+    src: url(../font/Orbitron.ttf);
+}
+
+@font-face {
+    font-family: 'poi';
+    src: url(../font/PoiretOne.ttf);
+}
+
+h2 {
+    font-family: 'poi';
+    font-size: 50px;
+    margin: 0;
+    color: white;
+    text-align: center;
+
+    text-shadow: white 1px 0 10px;
+}
+
+/*****************/
+/* Sliders WebGL */
+/*****************/
+
+.input-container {
+    width: 200px;
+}
+
+label {
+    font-family: "awa";
+    padding: 5px 0;
+}
+
+output {
+    font-family: "awa";
+    margin-left: 5px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 145px;
+    height: 3px;
+    border-radius: 15px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .25s;
+    transition: all .25s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--maincolor);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--maincolor);
+    cursor: pointer;
+}
+
+/***********/
+/* SideNav */
+/***********/
+
+.new-nav {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: #525e65;
+    text-align: center;
+    box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
+}
+
+.new-nav ul {
+    margin: 0;
+    list-style: none;
+
+}
+
+.new-nav li {
+    display: inline-block;
+}
+
+.new-nav a {
+    display: block;
+    height: 3rem;
+    padding: 0 1rem;
+    color: #DBE8D4;
+    line-height: 3em;
+    text-decoration: none;
+    border-bottom: 4px solid transparent;
+}
+
+.new-nav a:hover {
+    color: var(--secondarycolor);
+    border-bottom: 4px solid var(--secondarycolor);
+}
+
+/**************/
+/* Containers */
+/**************/
+
+.container-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container {
+    position: relative;
+    height: 100vh;
+    margin-bottom: 7em;
+    padding-top: var(--sidenav-margin);
+}
+
+.container {
+    height: 100%;
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 75px;
+}
+
+#mySurface {
+    width: 100%;
+}
+
+/********/
+/* Home */
+/********/
+
+.container-name {
+    text-align: center;
+    color: white;
+}
+
+.name {
+    font-family: 'orb';
+    font-size: 70px;
+    word-spacing: 50px;
+    text-shadow: white 1px 0 10px;
+
+}
+
+.job {
+    font-family: 'poi';
+    font-size: 40px;
+    font-style: italic;
+
+}
+
+.slider-3d {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 10px;
+    bottom: var(--sidenav-margin);
+    color: white;
+    padding: 10px;
+}
+
+/***********/
+/* AboutMe */
+/***********/
+
+.profile-desc {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.25s;
+}
+
+.profile-text {
+    background-color: #525e65;
+    opacity: 0.75;
+    width: 75%;
+    margin-left: 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile-text>p {
+    opacity: 1;
+    font-size: 20px;
+    font-family: "poi";
+    font-weight: bolder;
+    color: white;
+    text-align: justify;
+}
+
+.cv-button {
+    bottom: 0;
+    width: 170px;
+    padding: 7px 0;
+    margin: 1em auto 0 50px;
+    color: white;
+    background-color: transparent;
+    font-size: 13pt;
+    border: 2px solid var(--maincolor);
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.cv-button:hover {
+    background-color: var(--maincolor);
+    color: white;
+}
+
+.profile-img {
+    display: block;
+    position: relative;
+    background-size: cover;
+    background-position-x: center;
+    width: 500px;
+    height: 500px;
+    background-image: url("../img/me.png");
+    transition: all 0.25s;
+}
+
+.border-profile-top {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border-top: 4px solid var(--secondarycolor);
+    border-left: 4px solid var(--secondarycolor);
+    height: 50%;
+    width: 50%;
+}
+
+.border-profile-bot {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    border-bottom: 4px solid var(--secondarycolor);
+    border-right: 4px solid var(--secondarycolor);
+    height: 50%;
+    width: 50%;
+}
+
+#content:after {
+    height: 10px;
+    display: block;
+    width: 100px;
+    background: #808080;
+    border-right: 1px white;
+    content: '';
+}
+
+/**************************/
+/* container Project card */
+/**************************/
+
+.container-portfolio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project-image {
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    transition: all 0.25s;
+}
+
+.desc-project {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    transition: all 0.25s ease-in-out;
+}
+
+.desc-project-text {
+    top: 0;
+    width: 80%;
+}
+
+.desc-project-title {
+    color: black;
+    font-size: 40px;
+    font-family: "awa";
+
+}
+
+.desc-project-techused {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--maincolor);
+}
+
+.learnmore-button {
+    bottom: 0;
+    width: 170px;
+    padding: 7px 0;
+    color: black;
+    background-color: transparent;
+    font-size: 13pt;
+    border: 2px solid var(--maincolor);
+    cursor: pointer;
+}
+
+.container-card {
+    position: relative;
+    flex: 1 1 380px;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    transition: all 0.25s ease-in-out;
+}
+
+.container-card:hover>.learnmore-button {
+    opacity: 1;
+    bottom: 25%;
+}
+
+.container-card:hover>.project-image {
+    opacity: 0.15;
+}
+
+
+.container-card:hover>.desc-project-text {
+    opacity: 1;
+    top: 25%;
+}
+
+.container-card:hover>.learnmore-button:hover {
+    background-color: var(--maincolor);
+    color: white;
+}
+
+.container-card:hover {
+    background-color: #fff;
+}
+
+/***********************/
+/* modals for projects */
+/***********************/
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding-top: 8vh;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    box-shadow: 0 5px 50px #000;
+}
+
+/* Animation */
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetopreverse {
+    from {
+        top: 0;
+        opacity: 1
+    }
+
+    to {
+        top: -500px;
+        opacity: 0
+    }
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: rgb(255, 255, 255, 0.75);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 50%;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: all 0.25s;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 20px 40px;
+}
+
+.modal-footer {
+    padding: 10px 10px;
+    background-color: var(--background);
+}
+
+.modal-btn {
+    width: 170px;
+    padding: 7px 0;
+    margin: 0 10px;
+    color: white;
+    background-color: transparent;
+    font-size: 13pt;
+    border: 2px solid var(--maincolor);
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.modal-btn:hover {
+    background-color: var(--maincolor);
+    color: white;
+}
+
+.modal-title {
+    display: inline;
+    font-size: 40px;
+    font-family: "poi";
+    font-weight: bold;
+}
+
+.modal-date {
+    display: inline;
+    float: right;
+    font-family: "poi";
+    font-weight: bold;
+}
+
+.modal-tech {
+    font-size: 15px;
+    font-family: "awa";
+    font-weight: bold;
+    margin-left: 20px;
+    padding: 10px 0;
+    color: var(--maincolor);
+}
+
+.modal-team {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'poi';
+    font-size: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+}
+
+.modal-desc {
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    font-family: 'poi';
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: justify;
+}
+
+/***********************/
+/* carousel slider img */
+/***********************/
+
+.mySlides {
+    display: none;
+    overflow: hidden;
+}
+
+.mySlides>img {
+    height: 400px;
+    margin: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.25s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/**********/
+/* footer */
+/**********/
+
+.contact-link {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-holder {
+    background: #262f38;
+    padding: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    transition: all 0.25s;
+}
+
+a>.icon-holder:hover {
+    background: var(--maincolor);
+}
+
+footer {
+    position: relative;
+    background: #1b242f;
+    margin-top: 60px;
+    padding: 60px 0 25px 0;
+}
+
+.footnote {
+    text-align: center;
+    color: #8f9aa7;
+    font-size: 12pt;
+    margin-top: 35px;
+    opacity: 0.75;
+
+}
+
+footer .footnote .highlight {
+    color: var(--maincolor);
+    font-family: "Open Sans";
+}
+
+.page-link-up {
+    position: absolute;
+    background: var(--maincolor);
+    left: 0;
+    right: 0;
+    top: -25px;
+    width: 30px;
+    padding: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+/*********/
+/* media */
+/*********/
+
+@media screen and (max-width: 915px) {
+
+    .container-profile {
+        display: block;
+    }
+
+    .profile-img {
+        margin: 0 auto;
+        width: 400px;
+        height: 400px;
+    }
+
+    .cv-button {
+        display: block;
+        margin: 1em auto 0;
+    }
+
+    .profile-desc {
+        display: block;
+        width: 100%;
+    }
+
+    .profile-text {
+        margin: 2em auto 0;
+    }
+
+    .profile-text>p {
+        font-size: 18px;
+    }
+
+    .prev,
+    .next {
+        font-size: 11px
+    }
+
+    .modal-btn {
+        width: 80px;
+    }
+}
