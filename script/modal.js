@@ -40,6 +40,7 @@ var modalData = {
         detail: 'Renovation of an old arcade game named "Marble Master 1997" which has never had a serious update until now.',
         linkGit: 'https://m1.flareden.fr/TER/',
         linkPdf: 'res/Rapport_Swing.pdf',
+        linkYtb: 'https://m1.flareden.fr/TER/Swing.mp4',
         imgs: ['swing1.png', 'swing3.png', 'swing2.png']
     },
     raytracing: {
