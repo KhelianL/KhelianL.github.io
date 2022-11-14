@@ -196,8 +196,8 @@ output {
 
 .header-container {
     position: relative;
-    height: 100vh;
-    margin-bottom: 7em;
+    /* height: 100vh; */
+    /* margin-bottom: 7em; */
     padding-top: var(--sidenav-margin);
 }
 

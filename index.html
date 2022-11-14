@@ -9,8 +9,8 @@
     <link rel="icon" href="favicon.ico" />
 </head>
 
-<body onload="main();">
-
+<!-- <body onload="main();"> -->
+<body>
     <div class="new-nav">
         <ul>
             <li><a title="home" href="#home">Home</a></li>
@@ -25,32 +25,6 @@
         <div class="container-name">
             <div class="mp0 name">KHÉLIAN LARVET</div>
             <div class="mp0 job">3D Programmer</div>
-        </div>
-
-        <canvas id="mySurface"></canvas>
-
-        <div id="control" class="slider-3d">
-            <label for="speed_range">Speed</label>
-            <div class="input-container">
-                <input type="range" min="1" max="5" value="3" step="1" class="slider" id="speed_range"
-                    name="speed_range"
-                    oninput="this.nextElementSibling.value = this.value; rangeChange(0, this.value);">
-                <output>3.0</output>
-            </div>
-            <label for="amplitude_range">Amplitude</label>
-            <div class="input-container">
-                <input type="range" min="0.01" max="1" value="0.05" step="0.01" placeholder='0.00' class="slider"
-                    id="amplitude_range" name="amplitude_range"
-                    oninput="this.nextElementSibling.value = this.value; rangeChange(1, this.value);">
-                <output>0.05</output>
-            </div>
-            <label for="frequency_range">Frequency</label>
-            <div class="input-container">
-                <input type="range" min="0.1" max="5" value="1.5" step="0.1" placeholder='0.00' class="slider"
-                    id="frequency_range" name="frequency_range"
-                    oninput="this.nextElementSibling.value = this.value; rangeChange(2, this.value);">
-                <output>1.5</output>
-            </div>
         </div>
 
     </div>
@@ -70,7 +44,7 @@
             <div class="profile-desc">
                 <div class="profile-text">
                     <p>
-                        I'm Khélian LARVET, 23 years old and I am passionate about the game development and the 3D.
+                        I'm Khélian LARVET, 23 years old and I am passionate about image processing, game development and the 3D.
                     </p>
                     <p>
                         I am currently in the last year of my master's degree named "IMAGINE" and I'm ready to enter the
@@ -213,7 +187,7 @@
 </script>
 <script type="text/javascript" src="./script/sliders.js"></script>
 <script type="text/javascript" src="./script/shader.js"></script>
-<script type="text/javascript" src="./script/webglApp.js"></script>
+<!-- <script type="text/javascript" src="./script/webglApp.js"></script> -->
 <script type="text/javascript" src="./script/modal.js"></script>
 <script type="text/javascript" src="./script/carousel.js"></script>
 
