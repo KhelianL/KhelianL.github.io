@@ -1,4 +1,36 @@
 var modalData = {
+    safeEye: {
+        title: 'Safe-Eye',
+        date: '15/12/2022',
+        tech: 'Python , Keras',
+        team: 'Florentin DENIS, Khélian LARVET',
+        detail: 'Application for evaluating the visual security of an image and generating confidential versions by applying various obfuscation processes based on this measurement.',
+        linkGit: 'https://github.com/Flare00/Safe-Eye',
+        linkPdf: 'res/Rapport_SafeEye.pdf',
+        imgs: ['safeeye1.png', 'safeeye2.png']
+    },
+    marchingCloud: {
+        title: 'Marching Cloud',
+        date: '13/01/2023',
+        tech: 'C++ , Qt , CUDA',
+        team: 'Sylvain LECLERC, Khélian LARVET',
+        detail: 'Interactive Qt application capable of rendering point clouds using the "Ray-Marching" method on GPU.',
+        linkGit: 'https://github.com/KhelianL/MarchingCloud',
+        linkPdf: 'res/Rapport_MarchingCloud.pdf',
+        linkYtb: 'https://www.youtube.com/watch?v=7OSIGtARX7o',
+        imgs: ['marchingcloud1.png', 'marchingcloud3.png', 'marchingcloud2.png']
+    },
+    clayMotion: {
+        title: 'Clay Motion',
+        date: '06/01/2023',
+        tech: 'C# , Unity , LeapMotion',
+        team: 'Sylvain LECLERC, Khélian LARVET',
+        detail: 'The aim of this project is to create an interactive simulation that lets you manipulate 3D objects with your hands. We initially chose to focus on a pottery simulation where meshes can be generated, sculpted and deformed in real time.',
+        linkGit: 'https://github.com/KhelianL/ClayMotion',
+        linkPdf: 'res/Rapport_ClayMotion.pdf',
+        linkYtb: 'https://www.youtube.com/watch?v=IuxE-PWp5ZE',
+        imgs: ['claymotion1.png', 'claymotion3.png', 'claymotion2.png']
+    },
     gameEngine: {
         title: 'Game Engine',
         date: '11/05/2022',

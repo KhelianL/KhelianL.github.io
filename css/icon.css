@@ -29,23 +29,27 @@
 .background-swing {
     background-image: url(../img/img_Swing.png);
 }
-
 .background-disastweet {
     background-image: url(../img/img_Disastweet.png);
 }
-
 .background-gameengine {
     background-image: url(../img/img_GameEngine.png);
 }
-
 .background-meetingcar {
     background-image: url(../img/img_MeetingCar.png);
 }
-
 .background-raytracing {
     background-image: url(../img/img_Raytracing.png);
 }
-
 .background-colorharmony {
     background-image: url(../img/img_ColorHarmony.png);
+}
+.background-safeeye {
+    background-image: url(../img/img_SafeEye.png);
+}
+.background-marchingcloud {
+    background-image: url(../img/img_MarchingCould.png);
+}
+.background-claymotion {
+    background-image: url(../img/claymotion1.png);
 }
