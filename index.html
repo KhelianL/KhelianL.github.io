@@ -1,218 +1,237 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
-    <title>Khelian LARVET</title>
+    <title>Khélian LARVET</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/icon.css">
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="data/favicon.ico" />
 </head>
 
-<!-- <body onload="main();"> -->
 <body>
-    <div class="new-nav">
-        <ul>
-            <li><a title="home" href="#home">Home</a></li>
-            <li><a title="aboutme" href="#aboutme">About</a></li>
-            <li><a title="myprojects" href="#myprojects">Projects</a></li>
-        </ul>
-    </div>
+    <div id="init-overlay">
 
-    <a id="home"></a>
-    <div class="header-container">
-
-        <div class="container-name">
-            <div class="mp0 name">KHÉLIAN LARVET</div>
-            <div class="mp0 job">3D Programmer</div>
-        </div>
-
-    </div>
-
-
-    <a id="aboutme"></a>
-    <div class="container">
-        <div class="container-title">
-            <h2>About Me</h2>
-            <hr>
-        </div>
-        <div class="container-profile">
-            <div class="profile-img">
-                <div class="border-profile-top"></div>
-                <div class="border-profile-bot"></div>
-            </div>
-            <div class="profile-desc">
-                <div class="profile-text">
-                    <p>
-                        I'm Khélian LARVET, 23 years old and I am passionate about image processing, game development and the 3D.
-                    </p>
-                    <p>
-                        I am currently in the last year of my master's degree named "IMAGINE" and I'm ready to enter the
-                        working world where I could put my skills to use in the realization of new
-                        projects.
-                    </p>
-                    <p>
-                        I am highly organized and I always work towards achieving best result on each project. I like to
-                        think of myself as a team player. While I don’t mind taking on
-                        solo projects, I prefer to work with others.
-                    </p>
+        <!-- HEADER - NAVBAR -->
+        <header class="myHeader slider-rest">
+            <div class="header-content is-expanded">
+                <div class="header-container-left">
+                    <div class="header-logo-left">
+                        <img src="data/homeicon.png" alt="Logo Image" class="header-logo-img">
+                    </div>
+                    <span class="header-text-left">Khélian LARVET</span>
                 </div>
-                <a href="res/CV.pdf" type="application/pdf" target="_blank">
-                    <button class="cv-button">MY RESUME</button>
+                <div class="navBar">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#project">Projects</a></li>
+                    </ul>
+                    <div class="header-ham-menu-container">
+                        <!-- Menu -->
+                        <button id="open-responsive-navbar">
+                            <div class="icon icon_navbar"></div>
+                        </button>
+
+                        <!-- Cross -->
+                        <button id="close-responsive-navbar">
+                            <div class="icon icon_close"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- HEADER - CONTENT -->
+        <div id="home" class="header-container">
+            <div class="slider-rest">
+                <div class="container-name">
+                    <div class="name">Khélian LARVET</div>
+                    <div class='console-container'><span id='jobTextAnimate'></span>
+                        <div class='console-underscore'>&#95;</div>
+                    </div>
+                </div>
+                <div class='icon-scroll'></div>
+                <div class="button-parameter-container">
+                    <button id="pulse-button-parameter-enter">
+                        <div class="icon icon_gear"></div>
+                    </button>
+                </div>
+            </div>
+            <canvas id="myCanvas"></canvas>
+        </div>
+
+        <!-- HEADER - SLIDER PARAMETERS -->
+        <div class="slider-target">
+            <div id="control" class="webgl-slider-container">
+                <label for="param_pointsize">Point Size</label>
+                <div class="input-container">
+                    <input type="range" min="0.5" max="5" value="2" step="0.1" class="slider" id="param_pointsize">
+                    <output id="output_pointsize"></output>
+                </div>
+                <label for="param_nbpointx">Nb Points X</label>
+                <div class="input-container">
+                    <input type="range" min="2" max="100" value="50" step="1" class="slider" id="param_nbpointx">
+                    <output id="output_nbpointx"></output>
+                </div>
+                <label for="param_nbpointy">Nb Points Y</label>
+                <div class="input-container">
+                    <input type="range" min="2" max="100" value="50" step="1" class="slider" id="param_nbpointy">
+                    <output id="output_nbpointy"></output>
+                </div>
+                <label for="param_nbpointz">Nb Points Z</label>
+                <div class="input-container">
+                    <input type="range" min="2" max="100" value="50" step="1" class="slider" id="param_nbpointz">
+                    <output id="output_nbpointz"></output>
+                </div>
+                <label for="param_duration">Duration</label>
+                <div class="input-container">
+                    <input type="range" min="500" max="3000" value="1500" step="100" class="slider" id="param_duration">
+                    <output id="output_duration"></output>
+                </div>
+                <label for="param_amplitude">Amplitude</label>
+                <div class="input-container">
+                    <input type="range" min="0.01" max="0.5" value="0.05" step="0.01" class="slider"
+                        id="param_amplitude">
+                    <output id="output_amplitude"></output>
+                </div>
+                <label for="param_frequency">Frequency</label>
+                <div class="input-container">
+                    <input type="range" min="0.5" max="50" value="5" step="0.5" class="slider" id="param_frequency">
+                    <output id="output_frequency"></output>
+                </div>
+            </div>
+            <div class="parameter-overlay"></div>
+            <div class="button-parameter-container">
+                <button id="pulse-button-parameter-exit">
+                    <div class="icon icon_confirm"></div>
+                </button>
+            </div>
+        </div>
+
+        <!-- BODY - CONTAINER -->
+        <div>
+
+            <!-- CONTAINER - ABOUT -->
+            <div id="about" class="container-paddingNavBar">
+                <hr class="hr-text" data-content="About Me">
+
+                <div class="container-profile">
+                    <div class="profile-img">
+                        <img src="data/me.png" alt="profile picture">
+                        <div class="border-profile-top"></div>
+                        <div class="border-profile-bot"></div>
+                    </div>
+                    <div class="profile-desc">
+                        <div class="profile-text">
+                            <p>
+                                I'm Khélian LARVET, 24 years old and I am passionate about image processing, game
+                                development and the 3D.
+                            </p>
+                            <p>
+                                I am currently in the last year of my master's degree named "IMAGINE" and I'm ready to
+                                enter the working world where I could put my skills to use in the realization of new
+                                projects.
+                            </p>
+                            <p>
+                                I am highly organized and I always work towards achieving best result on each project. I
+                                like to think of myself as a team player. While I don't mind taking on solo projects, I
+                                prefer to work with others.
+                            </p>
+                        </div>
+                        <a href="data/CV.pdf" type="application/pdf" target="_blank">
+                            <button class="profile-cv-button">My resume</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTAINER - PROJECTS -->
+            <div id="project" class="container-paddingNavBar">
+                <hr class="hr-text" data-content="My Projects">
+                <div id="portfolioProject" class="project-container-portfolio"></div>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <a title="home" href="#home">
+                <div class="page-link-up">
+                    <div class="icon icon_arrow"></div>
+                </div>
+            </a>
+            <div class="contact-link">
+                <a href="https://github.com/KhelianL">
+                    <div class="icon-holder">
+                        <div class="icon icon_github"></div>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/khelianlarvet/">
+                    <div class="icon-holder">
+                        <div class="icon icon_linkedin"></div>
+                    </div>
                 </a>
             </div>
-        </div>
-    </div>
+            <div class="footnote">
+                Khélian LARVET <span class="highlight">©2023</span>
+            </div>
+        </footer>
 
-    <a id="myprojects"></a>
-    <div class="container">
-
-        <div class="container-title">
-            <h2>My Projects</h2>
-            <hr>
-        </div>
-
-        <div class="container-portfolio">
-            <div class="container-card">
-                <div class="project-image background-safeeye"></div>
-                <div class="desc-project desc-project-text">
-                    <div class="desc-project-title">Safe-Eye</div>
-                    <div class="desc-project-techused">Python , Keras</div>
+        <!-- MODAL -->
+        <div id="myModal" class="modal-overlay">
+            <!-- Modal content -->
+            <div id="modalContent" class="modal">
+                <!-- HEADER -->
+                <div class="modal-header">
+                    <span id="closeModal" class="close" onclick="hideModalAnim()">&times;</span>
                 </div>
-                <button onclick="openModal('safeEye')" class="desc-project learnmore-button">LEARN MORE</button>
-            </div>
-            <div class="container-card">
-                <div class="project-image background-marchingcloud"></div>
-                <div class="desc-project desc-project-text">
-                    <div class="desc-project-title">Marching Cloud</div>
-                    <div class="desc-project-techused">C++ , Qt , OpenGL</div>
+                <!-- BODY -->
+                <div class="modal-body">
+                    <!-- CAROUSSEL IMG -->
+                    <div id='modalImg' class="slideshow-container">
+                        <a class="prev" onclick="prevImageModal()">❮</a>
+                        <a class="next" onclick="nextImageModal()">❯</a>
+                        <div id="modalCountImg" class="modal-countimg"></div>
+                    </div>
+                    <!-- CONTENT -->
+                    <div class="modal-content">
+                        <div id="titleModal" class="modal-title"></div>
+                        <div id="dateModal" class="modal-date"></div>
+                        <div id="techModal" class="modal-tech"></div>
+                        <div>
+                            <hr class="hr-team" data-content="Details">
+                        </div>
+                        <div id="descModal" class="modal-desc"></div>
+                        <div>
+                            <hr class="hr-team" data-content="Links">
+                            <div id='modalLink' class="modal-descflex"></div>
+                        </div>
+                        <div class="modal-team">
+                            <hr class="hr-team" data-content="Made by">
+                            <div id="teamModal" class="modal-descflex">
+                                <div class="modal-teammate active">Khélian</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <button onclick="openModal('marchingCloud')" class="desc-project learnmore-button">LEARN MORE</button>
-            </div>
-            <div class="container-card">
-                <div class="project-image background-claymotion"></div>
-                <div class="desc-project desc-project-text">
-                    <div class="desc-project-title">Clay Motion</div>
-                    <div class="desc-project-techused">C# , Unity , LeapMotion</div>
-                </div>
-                <button onclick="openModal('clayMotion')" class="desc-project learnmore-button">LEARN MORE</button>
-            </div>
-            <div class="container-card">
-                <div class="project-image background-gameengine"></div>
-                <div class="desc-project desc-project-text">
-                    <div class="desc-project-title">GameEngine</div>
-                    <div class="desc-project-techused">C++ , OpenGL</div>
-                </div>
-                <button onclick="openModal('gameEngine')" class="desc-project learnmore-button">LEARN MORE</button>
-            </div>
-            <div class="container-card">
-                <div class="project-image background-meetingcar"></div>
-                <div class="desc-project desc-project-text">
-                    <div class="desc-project-title">MeetingCar</div>
-                    <div class="desc-project-techused">Java , Android</div>
-                </div>
-                <button onclick="openModal('meetingCar')" class="desc-project learnmore-button">LEARN MORE</button>
-            </div>
-            <div class="container-card">
-                <div class="project-image background-colorharmony"></div>
-                <div class="desc-project desc-project-text">
-                    <div class="desc-project-title">ColorHarmony</div>
-                    <div class="desc-project-techused">C++ , GTK</div>
-                </div>
-                <button onclick="openModal('colorHarmony')" class="desc-project learnmore-button">LEARN MORE</button>
-            </div>
-            <div class="container-card">
-                <div class="project-image background-swing"></div>
-                <div class="desc-project desc-project-text">
-                    <div class="desc-project-title">Swing</div>
-                    <div class="desc-project-techused">C# , Unity</div>
-                </div>
-                <button onclick="openModal('swing')" class="desc-project learnmore-button">LEARN MORE</button>
-            </div>
-            <div class="container-card">
-                <div class="project-image background-raytracing"></div>
-                <div class="desc-project desc-project-text">
-                    <div class="desc-project-title">Raytracing</div>
-                    <div class="desc-project-techused">C++ , OpenGL</div>
-                </div>
-                <button onclick="openModal('raytracing')" class="desc-project learnmore-button">LEARN MORE</button>
-            </div>
-            <div class="container-card">
-                <div class="project-image background-disastweet"></div>
-                <div class="desc-project desc-project-text">
-                    <div class="desc-project-title">Disastweet</div>
-                    <div class="desc-project-techused">Python , Javascript , MongoDB , Spacy , Leaflet</div>
-                </div>
-                <button onclick="openModal('disastweet')" class="desc-project learnmore-button">LEARN MORE</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-
-            <!-- HEADER -->
-            <span id="closeModal" class="close">&times;</span>
-
-            <!-- CAROUSSEL IMG -->
-            <div id='modalImg' class="slideshow-container">
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
-            </div>
-
-            <!-- BODY -->
-            <div class="modal-body">
-                <div id="titleModal" class="modal-title"></div>
-                <div id="dateModal" class="modal-date"></div>
-                <div id="techModal" class="modal-tech"></div>
-                <div id="descModal" class="modal-desc"></div>
-            </div>
-
-            <!-- FOOTER -->
-            <div id='modalLink' class="modal-footer">
             </div>
         </div>
 
     </div>
-
-    <footer>
-        <a title="home" href="#home">
-            <div class="page-link-up">
-                <div class="icon_arrow"></div>
-            </div>
-        </a>
-
-        <div class="contact-link">
-            <a href="https://github.com/KhelianL">
-                <div class="icon-holder">
-                    <div class="icon_github"></div>
-                </div>
-            </a>
-            <a href="https://www.linkedin.com/in/khelianlarvet/">
-                <div class="icon-holder">
-                    <div class="icon_linkedin"></div>
-                </div>
-            </a>
-        </div>
-
-        <div class="footnote">
-            KHELIAN LARVET <span class="highlight">©2022</span>
-        </div>
-
-    </footer>
 </body>
 
+<!-- WebGL Scripts -->
 <script type="text/javascript" src="./script/gl-matrix-min.js"></script>
-<script type="text/javascript">
-    const { mat2, mat3, mat4, vec2, vec3, vec4 } = glMatrix;
-</script>
-<script type="text/javascript" src="./script/sliders.js"></script>
-<script type="text/javascript" src="./script/shader.js"></script>
-<!-- <script type="text/javascript" src="./script/webglApp.js"></script> -->
+<script type="text/javascript" src="./script/webglApp.js"></script>
+
+<!-- Header Scripts -->
+<script type="text/javascript" src="./script/headerCompressExpand.js"></script>
+<script type="text/javascript" src="./script/headerNavBarActive.js"></script>
+<script type="text/javascript" src="./script/headerNavBarResponsive.js"></script>
+<script type="text/javascript" src="./script/consoleTextAnim.js"></script>
+
+<!-- Modal Scripts -->
 <script type="text/javascript" src="./script/modal.js"></script>
-<script type="text/javascript" src="./script/carousel.js"></script>
 
 </html>
